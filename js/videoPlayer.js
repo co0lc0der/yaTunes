@@ -31,7 +31,7 @@ export const videoPlayerInit = () => {
 
 	const addZero = n => n < 10 ? '0' + n : n;
 
-	const udatePlayerTime = () => {
+	const updatePlayerTime = () => {
 		const currentTime = videoPlayer.currentTime,
 					duration = videoPlayer.duration;
 
@@ -53,7 +53,7 @@ export const videoPlayerInit = () => {
 	videoPlayer.addEventListener('play', toggleIcon);
 	videoPlayer.addEventListener('pause', toggleIcon);
 
-	videoPlayer.addEventListener('timeupdate', udatePlayerTime);
+	videoPlayer.addEventListener('timeupdate', updatePlayerTime);
 
 	videoProgress.addEventListener('change', () => {
 		const duration = videoPlayer.duration,
@@ -62,5 +62,5 @@ export const videoPlayerInit = () => {
 		videoPlayer.currentTime = (value * duration) / 100;
 	});
 
-	udatePlayerTime();
+	updatePlayerTime();
 };
