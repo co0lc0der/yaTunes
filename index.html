@@ -23,9 +23,10 @@
 	<meta name="theme-color" content="#ffffff">
 	<title>ЯTunes</title>
 
-	<link rel="stylesheet" href="styles/normalize.css">
-	<link rel="stylesheet" href="styles/font-awesome.min.css">
-	<link rel="stylesheet" href="styles/style.min.css">
+	<link rel="stylesheet" href="./styles/normalize.css">
+	<link rel="stylesheet" href="./styles/font-awesome.min.css">
+	<link rel="stylesheet" href="./styles/scss/style.css">
+	<script src="./js/index.js" type="module" defer></script>
 </head>
 
 <body>
@@ -59,6 +60,10 @@
 						<p class="video-time video-time__passed">00:00</p>
 						<input type="range" class="video-progress" min="0" max="100" step="0.1" value="0">
 						<p class="video-time video-time__total">00:00</p>
+						<button class="fa fa-volume-down video-button" id="video-volume-down"></button>
+						<input type="range" class="video-volume" min="0" max="100" step="1" value="100">
+						<button class="fa fa-volume-up video-button" id="video-volume-up"></button>
+						<button class="fa fa-arrows-alt video-fullscreen video-button"></button>
 					</nav>
 				</div>
 			</div>
@@ -154,7 +159,7 @@
 									</div>
 									<input class="radio-btn" type="radio" id="roadRadio" name="radioStantion"
 											data-radio-stantion="http://dorognoe.hostingradio.ru:8000/dorognoe">
-									<span class="radio-name">Дорожное Радио</span>
+									<span class="radio-name">Дорожное</span>
 								</label>
 							</li>
 
@@ -175,11 +180,12 @@
 			</div>
 			<footer class="footer-fix radio-footer">
 				<button class="radio-stop fa fa-play"></button>
+				<button class="fa fa-volume-down radio-button" id="radio-volume-down"></button>
+				<input type="range" class="radio-volume" min="0" max="100" step="1" value="100">
+				<button class="fa fa-volume-up radio-button" id="radio-volume-up"></button>
 			</footer>
 		</article>
 	</main>
-
-	<script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
