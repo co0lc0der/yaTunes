@@ -84,4 +84,11 @@ export const radioPlayerInit = () => {
 
 	audio.volume = 0.5;
 	updateVolume();
+
+	radioPlayerInit.stop = () => {
+		if (!audio.paused) {
+			audio.pause();
+			toggleIcon();
+		}
+	};
 };

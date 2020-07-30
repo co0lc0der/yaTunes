@@ -108,4 +108,13 @@ export const musicPlayerInit = () => {
 
 		audioPlayer.currentTime = progress;
 	});
+
+	musicPlayerInit.stop = () => {
+		if (!audioPlayer.paused) {
+			audioPlayer.pause();
+			audio.classList.remove('play');
+			audioButtonPlay.classList.add('fa-play');
+			audioButtonPlay.classList.remove('fa-pause');
+		}
+	};
 };
